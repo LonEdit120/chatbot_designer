@@ -5,8 +5,10 @@ const port = 8787
 
 var http = require('http');
 var fs = require('fs');
-var QAJson = './public/uploaded/QA.json'
-var obj = require(QAJson)
+fs.writeFile('./public/uploaded/QA.json', '{}', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
 var dic = []
 var bidic = []
 var scoreboard = []
@@ -18,6 +20,8 @@ app.use(express.static(__dirname + '/public'))
 
 
 function bigram_formation(){
+    var QAJson = './public/uploaded/QA.json'
+    var obj = require(QAJson)
     console.log('bigraming')
     count = 0
     flag = 0
@@ -58,6 +62,9 @@ function bigram_formation(){
     console.log('Q bigram =========================')
     console.log(bidic)
 
+    console.log('obj ?????? =========================')
+    console.log(obj)
+
 }
 
 function question_bigram(string){
@@ -70,8 +77,10 @@ function question_bigram(string){
     console.log(Qdic)
 }
 
-app.get('/list', function(req, res){
+app.get('/sub', function(req, res){
     try {
+        var QAJson = './public/uploaded/QA.json'
+        var obj = require(QAJson)
         console.log('Updating QA.json')
         var data = fs.readFileSync('./public/uploaded/QA.txt', 'utf8');
         // console.log(data.length)

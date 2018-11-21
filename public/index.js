@@ -13,7 +13,7 @@ $('#UI > button:nth-child(3)').click((event) => {
 $('#UI > button:nth-child(15)').click((event) => {
     event.preventDefault()
 
-    $.get('list', {
+    $.get('sub', {
     }, (data) => {
       $('#ajax-output').html(data)
     })
