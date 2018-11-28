@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="main.css">
+    <link id="bubblestyle" rel="stylesheet" href="bubblestyle1.css">
+    <link id="bubblestyleleft" rel="stylesheet" href="bubblestyle(left).css">
+    <link id="fontstyle" rel="stylesheet" href="fontstyle2.css"> <!--Select fontstyle(.css)-->
+    <link id="fontstyle2" rel="stylesheet" href="fontstyle4.css"> <!--Select boldfont(.css) or normalfont(.css)-->
+
+    <link rel="shortcut icon" href="" type="image/png">
+    <script src="main.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="fontsize.js"></script>
+    <script src="fontstyle.js"></script>
+    <script src="bubble.js"></script>
+    <title>ChatBot</title>
+</head>
+<body>
+    <div class="NavBar">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <div class="MainFrame">
+        <div class="ToolBar">
+            <div class="Select">
+                <div class="Option ">
+                    <button class="OptionTab" onclick="Select(event, 'Bubble',true)">Bubble</button>
+                    <button class="OptionTab" onclick="Select(event, 'Frame',true)">Frame</button>
+                    <button class="OptionTab" onclick="Select(event, 'Font',true)">Font</button>
+                </div>
+
+                <div class="Property ">
+                    <button class="PropertyTab Bubble Frame" onclick="Select(event, 'Color',false)">Color</button>
+                    <button class="PropertyTab Bubble" onclick="Select(event, 'Style',false)">Style</button>
+                    <button class="PropertyTab Frame" onclick="Select(event, 'Background',false)">Background</button>
+                    <button class="PropertyTab Font" onclick="Select(event, 'FontStyle',false)">FontStyle</button>
+                    <button class="PropertyTab Font Size" onclick="Select(event, 'FontSize',false)">FontSize</button>
+                </div>
+            </div>
+
+
+            <!--Color-->
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(204, 14, 14)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(77, 245, 26)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(17, 0, 255)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(131, 75, 45)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+            <div class="Color StyleTabContent">
+                <button style="background-color:rgb(251, 255, 0)" onclick=selectTest(event)></button>
+            </div>
+
+
+            <!--Style-->
+            <div class="Style StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Style StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Style StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Style StyleTabContent">
+                <button></button>
+            </div>
+
+            <!--Background-->
+            <div class="Background StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Background StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Background StyleTabContent">
+                <button></button>
+            </div>
+            <div class="Background StyleTabContent">
+                <button></button>
+            </div>
+
+            <!--FontStyle-->
+            <div class="FontStyle StyleTabContent">
+                <button onclick="ChangeFontStyle1()" style="font-family:DFKai-sb">標楷體</button>
+            </div>
+
+            <div class="FontStyle StyleTabContent">
+                <button onclick="ChangeFontStyle2()" style="font-family:PMingLiU">新細明體</button>
+            </div>
+
+            <div class="FontStyle StyleTabContent">
+                <button onclick="ChangeFontStyle3()" style="font-family:Microsoft JhengHei">微軟正黑體</button>
+            </div>
+
+            <div class="FontStyle StyleTabContent">
+                <button onclick="ChangeFontStyle4()" style="font-weight:normal">細體</button>
+            </div>
+
+            <div class="FontStyle StyleTabContent">
+                <button onclick="ChangeFontStyle5()" style="font-weight:bold">粗體</button>
+            </div>
+
+            <!--FontSize-->
+            <div class="FontSize StyleTabContent">
+                <button id="enlarge_font_size" title="字體變大">A+</button>
+            </div>
+
+            <div class="FontSize StyleTabContent">
+                <button id="decrease_font_size" title="字體縮小">A-</button>
+            </div>
+
+            <!-- Color DEBUG-->
+            <div class="DEBUG" style="position:absolute;bottom:0;height:40px;width:40px">
+
+            </div>
+        </div>
+        <div class="Display">
+            <div class="Window" id="window">
+                <!--Bubble-->
+            </div>
+            <!--輸入-->
+            <div class="user">
+                <form id="ajax_form">
+                    <input type="text" name="fname" id="fname"><br>
+                    <button type="submit" id="btn">送出</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!--額外功能-->
+        <div class="Unknown">
+            <button>generate</button>
+            <button>save</button>
+            <form method="POST" name="fileInfo" enctype="multipart/form-data">
+                <input type="file" name="fileUpload"><br>
+                <button type="submit" >Submit</button>
+                <h1 id="ajax-output"></h1>
+            </form>
+        </div>
+</body>
+
+</html>

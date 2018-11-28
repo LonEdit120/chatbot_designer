@@ -1,0 +1,191 @@
+/*body*/
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
+
+/*NavBar*/
+.NavBar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.NavBar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.NavBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.NavBar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/*MainFrame*/
+.MainFrame{
+    height: 90vh;
+    width: 100vw;
+    padding-top: 1vh;
+}
+
+.ToolBar{
+    position: relative;
+    width: 30vw;
+    background-color: aliceblue;
+    height: inherit;
+    float: left;
+    left: 0vw;
+    top: 0vh;
+    overflow: scroll;
+}
+
+
+
+.Display{
+    position: relative;
+    width: 50vw;
+    background-color: lightgreen;
+    border:4px solid #edcfe1;
+    height: inherit;
+    float: left;
+    top: 0vh;
+}
+
+.Window{
+    position: absolute;
+    width: 94%;
+    height: 80%;
+    background-color: aliceblue;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin-top:3%;
+    margin-left:2%;
+    margin-right:1%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.DEBUG{
+    background-color: #4CAF50;
+}
+
+.Unknown{
+    position: relative;
+    width: 20vw;
+    background-color: aliceblue;
+    height: inherit;
+    float: left;
+    top: 0vh;
+}
+/*************/
+
+/* Style the Option */
+.Option ,.Property{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+.Select{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Style the buttons inside the Option */
+.Option button ,.Property button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */
+    flex: 1;
+}
+
+
+
+/* Change background color of buttons on hover */
+.Option button:hover ,.Property button:hover{
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.Option button.active ,.Property button.active{
+    background-color: #ccc;
+}
+
+.PropertyTab{
+    display: none;
+}
+
+.StyleTabContent{
+    display: none;
+    position: relative;
+    height: 8vw;
+    width:8vw;
+    margin: 1vw;
+    float: right;
+}
+
+.StyleTabContent button{
+    height:inherit;
+    width: inherit;
+    border-radius: 25%;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.StyleTabContent button:hover{
+    opacity: 0.5;
+}
+
+.user{
+    position:relative;
+    width:auto;
+    height:auto;
+    margin-top:80vh;
+    margin-left:2%;
+}
+
+#fname{
+    position:relative;
+    border:3px solid #edcfe1;
+    top:-3vh;
+    height:11vh;
+    width:40vw;
+    font-size:24px;
+}
+
+#btn{
+    position:relative;
+    top:-15vh;
+    left:41vw;
+    height:12vh;
+    width:5vw;
+    background-color:lightpink;
+    border:3px solid #edcfe1;
+}
