@@ -1,0 +1,67 @@
+/* CSS Document */
+* {
+	font-family: 'Noto Sans TC', sans-serif !important;
+}
+.color-white {
+	color: white !important;
+}
+.btn-size-big {
+	width: 280px !important;
+}
+.btn-size-normal {
+	width: 120px !important;
+}
+.btn-size-small {
+	width: 100px !important;
+}
+.btn-red {
+	background-color: red !important;
+}
+.btn-org {
+	background-color: orange!important;
+}
+.btn-yel {
+	background-color: yellow!important;
+}
+.btn-gre {
+	background-color: green !important;
+}
+.btn-blu {
+	background-color: blue !important;
+}
+.btn-whi {
+	background-color: white !important;
+}
+.btn-blk {
+	background-color: black !important;
+}
+.btn-gry {
+	background-color: gray !important;
+}
+.btn-color {
+	width: 100px !important;
+	height: 100px !important;
+}
+.vh-100 {
+    height: 100vh !important;
+}
+.vh-89 {
+    height: 89vh !important;
+}
+.container-chat {
+	margin-top: 56px;
+	height: 90vh !important;
+}
+.msg-margin {
+/*
+	margin-bottom: 62px;
+	padding-right: 6px;
+	padding-left: 12px;
+*/
+}
+
+#window{
+	overflow-y: scroll;
+    overflow-x: hidden;
+	font-size: 28px; 
+}

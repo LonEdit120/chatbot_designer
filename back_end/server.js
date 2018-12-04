@@ -10,20 +10,21 @@ var app = express();
 const path = '../front_end';
 
 // about us website
-app.use(express.static(path + '/WebChatBotLayout'));
+app.use(express.static(path + '/newbot'));
 
 app.listen(port,() => {
   console.log('Listening on port:',port);
 });
 
 app.post('/ask',(req,res)=>{
+  console.log('asking')
   var form = new formidable.IncomingForm();
   form.parse(req,(err,fields,files)=>{
       var question = fields['userQ'];
       var obj = JSON.parse(fs.readFileSync(__dirname+'/uploaded/jsonFile/QA.json','utf8'));
       bigram.evalQuery(question,obj,(err,max_index)=>{
         if(err) return res.send(err);
-          res.send('<div class="arrow_box1"><h1 class="bubble">' +obj.conversations[max_index].A + '</div></h1>');
+          res.send(obj.conversations[max_index].A);
       });
   });
 });
